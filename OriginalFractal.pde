@@ -1,9 +1,18 @@
+float startSize = 300;
+
 public void setup() {
   size(800, 800);
-  background(0);
   stroke(255);
   noFill();
-  drawDiamond(width/2, height/2, 300);
+}
+
+public void draw() {
+  background(0);
+  drawDiamond(width/2, height/2, startSize);
+}
+
+public void mousePressed() {
+  startSize = random(200, 350);
 }
 
 public void drawDiamond(float x, float y, float size) {
